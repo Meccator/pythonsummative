@@ -1,0 +1,229 @@
+####OrcsVsHumans.py
+####James Kosic, Luc Cepisca
+####April 26 2016
+####ICS201 // Mr.Cope
+####Summative video game, clash between orcs and humans
+import random
+print(" _______  _______  _______  _______             _______                      _______  _______  _        _______ ")
+print("(  ___  )(  ____ )(  ____ \(  ____ \  |\     /|(  ____ \  |\     /||\     /|(       )(  ___  )( (    /|(  ____ \ ")
+print("| (   ) || (    )|| (    \/| (    \/  | )   ( || (    \/  | )   ( || )   ( || () () || (   ) ||  \  ( || (    \/")
+print("| |   | || (____)|| |      | (_____   | |   | || (_____   | (___) || |   | || || || || (___) ||   \ | || (_____ ")
+print("| |   | ||     __)| |      (_____  )  ( (   ) )(_____  )  |  ___  || |   | || |(_)| ||  ___  || (\ \) |(_____  )")
+print("| |   | || (\ (   | |            ) |   \ \_/ /       ) |  | (   ) || |   | || |   | || (   ) || | \   |      ) |")
+print("| (___) || ) \ \__| (____/\/\____) |    \   /  /\____) |  | )   ( || (___) || )   ( || )   ( || )  \  |/\____) )")
+print("(_______)|/   \__/(_______/\_______)     \_/   \_______)  |/     \|(_______)|/     \||/     \||/    )_)\_______)")
+print("")
+print("")
+print("{0:^100s}".format("Welcome to Underbitea! Please put the window in fullscreen mode."))
+print("")
+print("{0:^100s}".format(" Welcome to the land of Underbitea, where the humans have been living peacefully for centuries."))
+print("{0:^100s}".format("A recent disturbance in the magical field has opened up a rift for legions of demonic orcs to come pouring into the human world."))
+print("{0:^100s}".format("If you are one who likes destruction, war and chaos, pick the Orc race."))
+print("{0:^100s}".format("If you are one who prefers peace, order and law, pick the Human race."))
+print("")
+def exitgame():
+    print("Thanks for playing!")
+    quit()
+userName = input(str("What is your name?"))
+
+userRace = input(str("Type 1 to be a Human, type 2 to be an Orc."))
+humangear = 0
+exp = 0
+tester = True
+tester1=True
+tester2=True
+tester3=True
+if userRace == "1" :
+    while tester :
+        humanRole = input(str("Are you Military or a Farmer?: "))
+        if humanRole == "Farmer":
+            print("")
+            print(" You wake up next to your homely wife, in the distant land of Griesz")
+            print("You see the sun rising and realizes you've got a couple things to do today.")
+            farmerChoice = input(str("1.You can tend to the pigs 2. You can go for a swim 3. You can harvest your crops. (Pick 1,2,3) "))
+            if farmerChoice == "1":
+                print("")
+                print("")
+                print("You head over to the pig coup and notice a trail of blood, leading to a vicious, rabid bearman devouring your pigs whole. He sees you, and eats you on sight.")
+                userDeath = input(str("You are dead. Revive as a Military or Farmer. Type Quit to quit "))
+                print("")
+                if userDeath == 'Farmer':
+                    print("")
+                    print("The bearman said you dont taste great. Probably need a shower.")
+                elif userDeath == 'Military':
+                    print("")
+                    print ("Welcome to the Army")
+                elif userDeath == 'Quit':
+                   exitgame()
+                else:
+                    print("")
+                    print('Please type Farmer, Military or Quit')
+            elif farmerChoice == '2':
+                print("")
+                print("")
+                print("You go for a swim and drown")
+                userDeath = input(str('You are dead. Revive as Military or Farmer. Type Quit to quit '))
+                if userDeath == 'Farmer':
+                    print("")
+                    print (" You forgot to take your rock shoes off!")
+                elif userDeath == 'Military':
+                    print("")
+                    print ("Welcome to the Army")
+                elif userDeath == 'Quit':
+                    exitgame()
+                else:
+                    print("")
+                    print('Please type Farmer, Military or Quit')
+            elif farmerChoice == '3':
+                print("")
+                print("")
+                print('You head over to your crops and are harvesting them when suddenly, a scarecrow cuts off you head from behind')
+                userDeath = input(str('You are dead. Revive as Military or Farmer. Type Quit to quit '))
+                if userDeath == 'Farmer':
+                    print("")
+                    print("Looks like you're the one stuffed with hay")
+                elif userDeath == 'Military':
+                    print("")
+                    print("Welcome to the Army")
+                elif userDeath == 'Quit':
+                    exitgame()
+                    break
+                else:
+                    print('Please type Farmer, Military or Quit')
+        elif humanRole == "Military":
+            while tester1:
+                print("")
+                print("You wake up to the sound of your trophy wife singing. She gives you news of your rural cousin being mauled by a bearman.")
+                print("While your wife wants you to do chores, duty calls. On your way to the barracks, you come across a fork in the road. Left leads you to the great city of Karazhan, right leads you to a known Gnoll camp")
+                militaryChoice1 = input(str("Do you go Left or Right? "))
+                if militaryChoice1 == "Right":
+                    print("")
+                    print(" As you head towards the camp, disregarding all the signs telling you to turn back you realize you left your battle equipment back in the barracks")
+                    militaryChoice2 = input(str(" Type 1 to go back to the barracks, type 2 to proceed without gear"))
+                    if militaryChoice2 == "1":
+                        print("")
+                        militaryChoice1 = input(str("Do you go left or right? "))
+                            #entering gnoll camp 
+                    if militaryChoice2 == "2":
+                        print("")
+                        print("As you head deeper into the ominous forest, you start to hear what sounds like hyena laughs, mixed with guttural war cries")
+                        print("The darker the forest gets, the louder the sound of battle gets. You are already committed and begin to run into the forest, stopping when the cries get loudest.")
+                        print("You see one... no two... no... 8 humanoid figures, obliterating gnolls left and right")
+                        GEChoice1 = input(str("Type 1 to blind charge into battle, type 2 to take the cowards way out (Quit): "))
+                        if GEChoice1 =="2":
+                            exitgame()
+                        elif GEChoice1 == '1':
+                            rifoe = random.randint(0,75)
+                            print("This is an encounter of luck, and to win it, you need a roll of higher than 60. A dice has been rolled and your number is",rifoe,"Good luck")
+                            if rifoe > 60:
+                                print("")
+                                print("You leap out of the bushes to the creatures surprise, and smash one of their heads with a rock. The rest apologize to you and cower in fear, muttering something about a rock god. They scramble off when you raise the rock.")
+                                print("You've won this encounter and gained 10 experience points, which will assist your future rolls")
+                                print("You head back to the fork and go left")
+                                exp = 10
+                            elif rifoe < 60:
+                                print("")
+                                print("The greenskinned creatures see you hiding behind a shrub. They all jump on you and skin you alive. Should've ran away. You are dead")
+                        else:
+                            print("")
+                            GEChoice1 = input(str("Type 1 to blind charge into battle, type 2 to quit"))
+                if militaryChoice1 == "Left":
+                    print("")
+                    print("Wandering up the path towards the magesterial spires of Karazhan, the new guy Joe from Paratrooper Brigade 1 salutes you.")
+                    print("'Hey cap!' He exclaims ' I can't wait to guard the city!'. Interesting how he knows he is going to be mopping the stables for the first month")
+                    print(" You've arrived at Karazhan!")
+                    print("                       T~~ ")
+                    print("                       |    ")
+                    print("                      /'\\")
+                    print("              T~~     |'| T~~")
+                    print("          T~~ |    T~ WWWW|")
+                    print("          |  /'\   |  |  |/\T~~")
+                    print("         /'\ WWW  /'\ |' |WW|")
+                    print("        WWWWW/\| /   \|'/\|/'\\")
+                    print("        |   /__\/]WWW[\/__\WWWW")
+                    print("        |'  WWWW'|I_I|'WWWW'  |")
+                    print("        |   |' |/  -  \|' |'  |")
+                    print("        |'  |  |LI=H=LI|' |   |")
+                    print("        |   |' | |[_]| |  |'  |")
+                    print("        |   |  |_|###|_|  |   |")
+                    print("        '---'--'-/___\-'--'---'")
+                    print("")
+                    while tester2:
+                        print("")
+                        GearCheck = input(str("On your way to report to the Lieutenant Commander, you look down at your hands, and realize you dont have any gear. Type 1 to proceed to the Lieut. Commander, type 2 to get your gear: "))                               
+                        if GearCheck == "2":
+                            humangear = random.randint(1,15)
+                            print("You head back to the barracks to get your gear, which will add", humangear ," to your roll")
+                            GearCheck = input(str("Type 1: "))
+                        if GearCheck == "1":
+                            print("You approach the lieutenant commander and report to him, asking for the next mission.")
+                            print(" Lieutenant Commander Bryan, The Knight With The Underbite: 'Hello", userName,". There have been reports of strange greeenskinned humanoid beasts called Orcs. I want you to investigate. Patrol through the village and into the forest, and report back to me.")
+                            print("Lieutenant Commander Bryan, The Knight With The Underbite: 'You can take a troop of soldiers to follow you if needed. Good luck, and be safe out there.")
+                            troop = input(str("Do you want the troop? (Yes or No): "))
+
+                        else:
+                             GearCheck = input(str("On your way to inform the Lieutenant Commander, you look down at your bloodstained hands, and realize you dont have any gear. Type 1 to proceed to the Lieut. Commander, type 2 to get your gear"))
+                        if troop == "Yes":
+                            trooprole = random.randint(1,15)
+                            print("Your roll has been increased by ",trooprole,".")
+                            print("The lieutenant sends you off to the orc camp, with a fresh horse and the kingdoms finest armor")
+                            OrcBattle1 = input(str("After a few leagues of riding, you come across a gore stained cave entrance. Upon entering, you see a huddle of 'Orcs'. Type 1 to engage, 2 to sneak around them."))
+                        elif troop == "No":
+                            trooprole = 0
+                            print("The lieutenant sends you off to the orc camp, with a fresh horse and the kingdoms finest armor")
+                            OrcBattle1 = input(str("After a few leagues of riding, you come across a gore stained cave entrance. Upon entering, you see a huddle of 'Orcs'. Type 1 to engage, 2 to sneak around them."))
+                        elif troop == "Quit":
+                            exitgame()
+                        else:
+                            troop = input(str("Do you want the troop? (Yes or No): "))
+                        if OrcBattle1 == "1":
+                            OBRole = random.randint(0,100)
+                            print("After your first encounter, you have some experience, gear and know what to do. To beat it you need a roll higher than 70 to win. Your roll is", OBRole+humangear+trooprole+exp,". Good luck.")
+                            if OBRole+humangear+trooprole+exp > 70:
+                              print("You gallop into battle and ride over the orcs. None of them survive - and you've taken no casualties. Congratulations Captain, you've earned 10 exp points")
+                              Cavechoice1 = input(str("The cave stretchs past the orcs bodies for what seems like miles, and there is a glowing light at the end. Do you Go Back(type 1) to Karazhan and report the vanquishing of the orcs, or do you Procceed (type 2) and investigate the glowing light?: "))
+                              exp = 20
+                            elif OBRole+humangear+trooprole+exp < 70:
+                              print("The orcs launch a counter attack, and with intelligent maneuvers and finessing, they flick all of you like flies. You are dead")
+                        elif OrcBattle1 == "2":
+                            OBRole = random.randint(100,1000)
+                            print("This is an encounter of chance - if you chose to take Troops, you will lose some points of your role. You need a number greater than 600 and your number is", OBRole+(exp*5)-(trooprole*5),". Good Luck")
+                            if OBRole+(exp*5)-(trooprole*5) > 600:
+                                print("You manage to convince the orcs you are not there. You've snuck past leaving only horse droppings behind you")
+                                exp = 20
+                                Cavechoice1 = input(str("The cave stretchs past the orcs for what seems like miles, and there is a glowing light at the end. Do you return to Karazhan (1) or investigate the light?(2): "))
+                            elif OBRole+(exp*5)-(trooprole*5) < 600:
+                                print("Perception check failed - the orcs realized there are armored men on horses trying to waltz through their ranks, and devoured all of them. You are dead")
+                        elif OrcBattle1 == "Quit":
+                            exitgame()
+                        else:
+                            OrcBattle1 = input(str("After a few leagues of riding, you come across a gore stained cave entrance. Upon entering, you see a huddle of 'Orcs'. Type 1 to engage, 2 to sneak around them."))
+                            if Cavechoice1 == "2":
+                                print("")
+                                print("You've decided to find out what the light at the end of the tunnel. No, you didnt die.")
+                                print("As you go towards the end of the tunnel, you start sweating profusely due to a rising temperature")
+                                print("The light gets brighter and brighter as the heat goes up. A pool of lava perhaps?")
+                                print("As you approach the mouth of the tunnel, you see a red, scaly shape resting on a podium at the bottom. A dragon!")
+                                print("On the other side of the cave, over the dragon, there is another cave opening, housing a troop of greenskins")
+                                print("The Orcs roar as soon as they take notice of you, stirring the dragon. You decide to run before it wakes up and devours you.")
+                                print("")
+                                print("You've made it back to the front of the cave and decide to go back to Karazhan and parade your victory.")
+                                print("A short time into the pleasant trot back to the city, you meet up with Lieutenant Commander Bryan, The Knight With The Underbite, and 10 score of men.")
+                                print("Lieutenant Commander Bryan, The Knight With The Underbite: 'Ho",userName,". A courier has warned the entire army that a mass of orcs have set up camp not 2 leagues from the village.'")
+                                print("Lieutenant Commander Bryan, The Knight With The Underbite: 'We need more men to fight them off. It's no fun unless they run. You can go back to the barracks and get more men, or you could just come with us")
+                                karazhanreturn1 = input(str("Do you go to the barracks (1) or continue to the battle with Lieutenant Commander Bryan, The Knight With The Underbite (2)?: "))
+                            elif Cavechoice1 == "1":
+                                print("")
+                                print("You've made it back to the front of the cave and decide to go back to Karazhan and parade your victory.")
+                                print("A short time into the pleasant trot back to the city, you meet up with Lieutenant Commander Bryan, The Knight With The Underbite, and 10 score of men.")
+                                print("Lieutenant Commander Bryan, The Knight With The Underbite: 'Ho",userName,". A courier has warned the entire army that a mass of orcs have set up camp not 2 leagues from the village.'")
+                                print("Lieutenant Commander Bryan, The Knight With The Underbite: 'We need more men to fight them off. It's no fun unless they run. You can go back to the barracks and get more men, or you could just come with us")
+                                karazhanreturn1 = input(str("Do you go to the barracks (1) or continue to the battle with Lieutenant Commander Bryan, The Knight With The Underbite (2)?: "))
+                            elif Cavechoice1 == "Quit":
+                                exitgame()
+                            else:
+                                Cavechoice1 = input(str("The cave stretchs past the orcs for what seems like miles, and there is a glowing light at the end. Do you return to Karazhan (1) or investigate the light?(2): "))
+
+                            if karazhanreturn1 == "1":
+                                print("")
+                                print("You return to the fuck camp")
